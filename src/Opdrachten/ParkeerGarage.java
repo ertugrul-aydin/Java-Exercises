@@ -37,10 +37,10 @@ public class ParkeerGarage {
         }
 
         System.out.println("Parkeeroverzicht");
-        System.out.println("kenteken \t uren \t bedrag");
+        System.out.printf("%-10s %-5s %-6s%n", "kenteken", "uren", "bedrag");
 
         for (int i = 0; i < autos; i++) {
-            System.out.println(kenteken[i] + " \t " + parkeerDuur[i] + " \t " + parkeerKosten[i]);
+            System.out.printf("%-10s %-5d %-6.2f%n", kenteken[i], parkeerDuur[i], parkeerKosten[i]);
             totaleParkeerGelden += parkeerKosten[i];
         }
 
